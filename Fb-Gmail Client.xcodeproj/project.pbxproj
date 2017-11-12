@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		476F52C4C5EBE244B8E1E571 /* Pods_Fb_Gmail_Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 066BB285D7E4FF9047A25F2E /* Pods_Fb_Gmail_Client.framework */; };
+		C47F3F5E1FB4A1AC00F1FD1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F3F5D1FB4A1AC00F1FD1C /* AppDelegate.swift */; };
+		C47F3F601FB4A1AC00F1FD1C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F3F5F1FB4A1AC00F1FD1C /* LoginVC.swift */; };
+		C47F3F631FB4A1AC00F1FD1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47F3F611FB4A1AC00F1FD1C /* Main.storyboard */; };
+		C47F3F651FB4A1AC00F1FD1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C47F3F641FB4A1AC00F1FD1C /* Assets.xcassets */; };
+		C47F3F681FB4A1AC00F1FD1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47F3F661FB4A1AC00F1FD1C /* LaunchScreen.storyboard */; };
+		C47F3F731FB521A600F1FD1C /* InviteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F3F721FB521A600F1FD1C /* InviteVC.swift */; };
+		C47F3F751FB5237400F1FD1C /* SocialFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F3F741FB5237400F1FD1C /* SocialFriend.swift */; };
+		C47F3F771FB52A0100F1FD1C /* SocialFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F3F761FB52A0100F1FD1C /* SocialFriendCell.swift */; };
+		C4DCB92C1FB5821A0075B025 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4DCB92B1FB5820C0075B025 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		066BB285D7E4FF9047A25F2E /* Pods_Fb_Gmail_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fb_Gmail_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7081238E4634BCC1351435A1 /* Pods-Fb-Gmail Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fb-Gmail Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fb-Gmail Client/Pods-Fb-Gmail Client.release.xcconfig"; sourceTree = "<group>"; };
+		C47F3F5A1FB4A1AC00F1FD1C /* Fb-Gmail Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fb-Gmail Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C47F3F5D1FB4A1AC00F1FD1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C47F3F5F1FB4A1AC00F1FD1C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		C47F3F621FB4A1AC00F1FD1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C47F3F641FB4A1AC00F1FD1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C47F3F671FB4A1AC00F1FD1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C47F3F691FB4A1AC00F1FD1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C47F3F711FB4BB1100F1FD1C /* Fb-Gmail Client.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Fb-Gmail Client.entitlements"; sourceTree = "<group>"; };
+		C47F3F721FB521A600F1FD1C /* InviteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteVC.swift; sourceTree = "<group>"; };
+		C47F3F741FB5237400F1FD1C /* SocialFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialFriend.swift; sourceTree = "<group>"; };
+		C47F3F761FB52A0100F1FD1C /* SocialFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialFriendCell.swift; sourceTree = "<group>"; };
+		C4DCB92B1FB5820C0075B025 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEAF0D2DC2FC48502C100528 /* Pods-Fb-Gmail Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fb-Gmail Client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fb-Gmail Client/Pods-Fb-Gmail Client.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C47F3F571FB4A1AC00F1FD1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				476F52C4C5EBE244B8E1E571 /* Pods_Fb_Gmail_Client.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		164136268598DA968D4EF1A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				066BB285D7E4FF9047A25F2E /* Pods_Fb_Gmail_Client.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6FA28136A09E70505F0B4B9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CEAF0D2DC2FC48502C100528 /* Pods-Fb-Gmail Client.debug.xcconfig */,
+				7081238E4634BCC1351435A1 /* Pods-Fb-Gmail Client.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C47F3F511FB4A1AC00F1FD1C = {
+			isa = PBXGroup;
+			children = (
+				C47F3F5C1FB4A1AC00F1FD1C /* Fb-Gmail Client */,
+				C47F3F5B1FB4A1AC00F1FD1C /* Products */,
+				6FA28136A09E70505F0B4B9D /* Pods */,
+				164136268598DA968D4EF1A4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C47F3F5B1FB4A1AC00F1FD1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C47F3F5A1FB4A1AC00F1FD1C /* Fb-Gmail Client.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C47F3F5C1FB4A1AC00F1FD1C /* Fb-Gmail Client */ = {
+			isa = PBXGroup;
+			children = (
+				C48905081FB5440500D437A0 /* Model */,
+				C48905071FB543EF00D437A0 /* Controller */,
+				C489050A1FB5442400D437A0 /* View */,
+				C47F3F711FB4BB1100F1FD1C /* Fb-Gmail Client.entitlements */,
+				C47F3F5D1FB4A1AC00F1FD1C /* AppDelegate.swift */,
+				C47F3F611FB4A1AC00F1FD1C /* Main.storyboard */,
+				C47F3F641FB4A1AC00F1FD1C /* Assets.xcassets */,
+				C47F3F661FB4A1AC00F1FD1C /* LaunchScreen.storyboard */,
+				C47F3F691FB4A1AC00F1FD1C /* Info.plist */,
+				C4DCB92B1FB5820C0075B025 /* GoogleService-Info.plist */,
+			);
+			path = "Fb-Gmail Client";
+			sourceTree = "<group>";
+		};
+		C48905071FB543EF00D437A0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C47F3F5F1FB4A1AC00F1FD1C /* LoginVC.swift */,
+				C47F3F721FB521A600F1FD1C /* InviteVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C48905081FB5440500D437A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C47F3F741FB5237400F1FD1C /* SocialFriend.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C489050A1FB5442400D437A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C47F3F761FB52A0100F1FD1C /* SocialFriendCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C47F3F591FB4A1AC00F1FD1C /* Fb-Gmail Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C47F3F6C1FB4A1AC00F1FD1C /* Build configuration list for PBXNativeTarget "Fb-Gmail Client" */;
+			buildPhases = (
+				52FABB00E612B00768EA942C /* [CP] Check Pods Manifest.lock */,
+				C47F3F561FB4A1AC00F1FD1C /* Sources */,
+				C47F3F571FB4A1AC00F1FD1C /* Frameworks */,
+				C47F3F581FB4A1AC00F1FD1C /* Resources */,
+				49202181025FB4AFA603AFCB /* [CP] Embed Pods Frameworks */,
+				47FD4131B58024C40B1B10F2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fb-Gmail Client";
+			productName = "Fb-Gmail Client";
+			productReference = C47F3F5A1FB4A1AC00F1FD1C /* Fb-Gmail Client.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C47F3F521FB4A1AC00F1FD1C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Michael Alexander";
+				TargetAttributes = {
+					C47F3F591FB4A1AC00F1FD1C = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = C47F3F551FB4A1AC00F1FD1C /* Build configuration list for PBXProject "Fb-Gmail Client" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C47F3F511FB4A1AC00F1FD1C;
+			productRefGroup = C47F3F5B1FB4A1AC00F1FD1C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C47F3F591FB4A1AC00F1FD1C /* Fb-Gmail Client */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C47F3F581FB4A1AC00F1FD1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C47F3F681FB4A1AC00F1FD1C /* LaunchScreen.storyboard in Resources */,
+				C4DCB92C1FB5821A0075B025 /* GoogleService-Info.plist in Resources */,
+				C47F3F651FB4A1AC00F1FD1C /* Assets.xcassets in Resources */,
+				C47F3F631FB4A1AC00F1FD1C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47FD4131B58024C40B1B10F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Fb-Gmail Client/Pods-Fb-Gmail Client-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fb-Gmail Client/Pods-Fb-Gmail Client-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49202181025FB4AFA603AFCB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Fb-Gmail Client/Pods-Fb-Gmail Client-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fb-Gmail Client/Pods-Fb-Gmail Client-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52FABB00E612B00768EA942C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fb-Gmail Client-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C47F3F561FB4A1AC00F1FD1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C47F3F751FB5237400F1FD1C /* SocialFriend.swift in Sources */,
+				C47F3F731FB521A600F1FD1C /* InviteVC.swift in Sources */,
+				C47F3F601FB4A1AC00F1FD1C /* LoginVC.swift in Sources */,
+				C47F3F771FB52A0100F1FD1C /* SocialFriendCell.swift in Sources */,
+				C47F3F5E1FB4A1AC00F1FD1C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C47F3F611FB4A1AC00F1FD1C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C47F3F621FB4A1AC00F1FD1C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C47F3F661FB4A1AC00F1FD1C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C47F3F671FB4A1AC00F1FD1C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C47F3F6A1FB4A1AC00F1FD1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C47F3F6B1FB4A1AC00F1FD1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C47F3F6D1FB4A1AC00F1FD1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEAF0D2DC2FC48502C100528 /* Pods-Fb-Gmail Client.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Fb-Gmail Client/Fb-Gmail Client.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAB4A2ATCG;
+				INFOPLIST_FILE = "Fb-Gmail Client/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michaelalexander.Fb-Gmail-Client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C47F3F6E1FB4A1AC00F1FD1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7081238E4634BCC1351435A1 /* Pods-Fb-Gmail Client.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Fb-Gmail Client/Fb-Gmail Client.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAB4A2ATCG;
+				INFOPLIST_FILE = "Fb-Gmail Client/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michaelalexander.Fb-Gmail-Client";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C47F3F551FB4A1AC00F1FD1C /* Build configuration list for PBXProject "Fb-Gmail Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C47F3F6A1FB4A1AC00F1FD1C /* Debug */,
+				C47F3F6B1FB4A1AC00F1FD1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C47F3F6C1FB4A1AC00F1FD1C /* Build configuration list for PBXNativeTarget "Fb-Gmail Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C47F3F6D1FB4A1AC00F1FD1C /* Debug */,
+				C47F3F6E1FB4A1AC00F1FD1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C47F3F521FB4A1AC00F1FD1C /* Project object */;
+}

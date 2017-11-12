@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--LoginVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="Fb_Gmail_Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dCf-kr-vJc">
+                                <rect key="frame" x="142.5" y="313.5" width="90" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2b-Mn-bdA">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="40" id="N9b-Jd-aQm"/>
+                                            <constraint firstAttribute="height" constant="40" id="fIf-hO-D9R"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="icons8-google"/>
+                                        <connections>
+                                            <action selector="gmailBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aeG-Ci-IWd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IH2-26-N3L">
+                                        <rect key="frame" x="50" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Rg0-bi-uCs"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="40" id="vae-nw-eHH"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="icons8-facebook"/>
+                                        <connections>
+                                            <action selector="fbBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2XO-J1-4P6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dCf-kr-vJc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Ri-xm-HgH"/>
+                            <constraint firstItem="dCf-kr-vJc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IXP-fi-dwY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="fbButton" destination="IH2-26-N3L" id="nYW-Ae-6IA"/>
+                        <segue destination="73p-Z3-sr9" kind="presentation" identifier="segueToInviteVC" id="DG6-0a-5AO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202" y="32"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ngO-mP-a9C">
+            <objects>
+                <navigationController id="73p-Z3-sr9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F5t-DI-vSl">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nff-p5-wXx" kind="relationship" relationship="rootViewController" id="JaV-Qj-yyC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X2j-SV-lB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633" y="32"/>
+        </scene>
+        <!--Invite Friends-->
+        <scene sceneID="1jT-Vt-Qcn">
+            <objects>
+                <viewController id="nff-p5-wXx" customClass="InviteVC" customModule="Fb_Gmail_Client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bDx-gb-RDj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YgA-RV-ive">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="friendCell" rowHeight="78" id="OJ3-eD-Qz0" customClass="SocialFriendCell" customModule="Fb_Gmail_Client" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="78"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OJ3-eD-Qz0" id="S31-i2-huT">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="77.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VH-hw-uMK">
+                                                    <rect key="frame" x="76" y="14" width="291" height="23.5"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J7w-K5-ls6">
+                                                    <rect key="frame" x="8" y="8.5" width="60" height="60.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="Jiw-9S-lAK"/>
+                                                        <constraint firstAttribute="height" constant="60" id="TzO-sx-x9Q"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abY-Gc-SXy">
+                                                    <rect key="frame" x="76" y="45.5" width="291" height="0.0"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="abY-Gc-SXy" firstAttribute="trailing" secondItem="S31-i2-huT" secondAttribute="trailingMargin" id="Kxf-Q8-YIb"/>
+                                                <constraint firstItem="6VH-hw-uMK" firstAttribute="top" secondItem="S31-i2-huT" secondAttribute="topMargin" constant="6" id="LfX-Ct-Zho"/>
+                                                <constraint firstItem="J7w-K5-ls6" firstAttribute="centerY" secondItem="S31-i2-huT" secondAttribute="centerY" id="QNQ-at-tBT"/>
+                                                <constraint firstItem="6VH-hw-uMK" firstAttribute="trailing" secondItem="S31-i2-huT" secondAttribute="trailingMargin" id="UkK-fl-ldF"/>
+                                                <constraint firstItem="abY-Gc-SXy" firstAttribute="top" secondItem="6VH-hw-uMK" secondAttribute="bottom" constant="8" id="XUw-4N-EIN"/>
+                                                <constraint firstItem="J7w-K5-ls6" firstAttribute="leading" secondItem="S31-i2-huT" secondAttribute="leadingMargin" id="gXr-nQ-2VK"/>
+                                                <constraint firstItem="6VH-hw-uMK" firstAttribute="leading" secondItem="J7w-K5-ls6" secondAttribute="trailing" constant="8" id="iyC-dO-Zsn"/>
+                                                <constraint firstItem="abY-Gc-SXy" firstAttribute="leading" secondItem="J7w-K5-ls6" secondAttribute="trailing" constant="8" id="ytm-fU-cCl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emailLbl" destination="abY-Gc-SXy" id="lz1-bZ-Pk4"/>
+                                            <outlet property="nameLbl" destination="6VH-hw-uMK" id="nwl-Vq-Kft"/>
+                                            <outlet property="profilePic" destination="J7w-K5-ls6" id="7R0-0h-NhQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="nff-p5-wXx" id="Nfj-Wy-eD1"/>
+                                    <outlet property="delegate" destination="nff-p5-wXx" id="5K6-6L-8Jw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YgA-RV-ive" firstAttribute="leading" secondItem="yYL-Gr-scU" secondAttribute="leading" id="APn-NZ-1zZ"/>
+                            <constraint firstItem="YgA-RV-ive" firstAttribute="bottom" secondItem="yYL-Gr-scU" secondAttribute="bottom" id="JbG-7p-9Qq"/>
+                            <constraint firstItem="YgA-RV-ive" firstAttribute="top" secondItem="yYL-Gr-scU" secondAttribute="top" id="WyV-L8-i7X"/>
+                            <constraint firstItem="YgA-RV-ive" firstAttribute="trailing" secondItem="yYL-Gr-scU" secondAttribute="trailing" id="i5F-5g-ph0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yYL-Gr-scU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Invite Friends" id="qp8-4f-YTM"/>
+                    <connections>
+                        <outlet property="tableView" destination="YgA-RV-ive" id="CfI-On-p8q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ib-zc-G3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1424.8" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-facebook" width="50" height="50"/>
+        <image name="icons8-google" width="40" height="40"/>
+    </resources>
+</document>
