@@ -8,6 +8,7 @@
 import UIKit
 import GoogleSignIn
 import FBSDKShareKit
+import MessageUI
 
 class InviteVC: UIViewController{
     
@@ -25,6 +26,10 @@ class InviteVC: UIViewController{
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
+    }
+    
+    @IBAction func invitePressed(_ sender: Any) {
+        
     }
 
     func searchBarisEmpty() -> Bool {
@@ -80,5 +85,36 @@ extension InviteVC: UITableViewDelegate, UITableViewDataSource {
 extension InviteVC: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchtext(searchController.searchBar.text!)
+    }
+}
+
+extension InviteVC: MFMessageComposeViewControllerDelegate {
+    
+    func sendTexts(to phoneNumbers: [String]) {
+        if (MFMessageComposeViewController.canSendText()) {
+            print("here")
+            let messageVC = MFMessageComposeViewController()
+            messageVC.body = "https://itunes.apple.com/us/app/sk8spots-skate-spots-app/id1281370899?mt=8"
+            messageVC.recipients = ["19143107144"]
+            messageVC.messageComposeDelegate = self
+            self.present(messageVC, animated: true, completion: nil)
+        }
+    }
+
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        //... handle sms screen actions
+        switch (result.rawValue) {
+        case MessageComposeResult.cancelled.rawValue:
+            print("Message was cancelled")
+            self.dismiss(animated: true, completion: nil)
+        case MessageComposeResult.failed.rawValue:
+            print("Message failed")
+            self.dismiss(animated: true, completion: nil)
+        case MessageComposeResult.sent.rawValue:
+            print("Message was sent")
+            self.dismiss(animated: true, completion: nil)
+        default:
+            break;
+        }
     }
 }

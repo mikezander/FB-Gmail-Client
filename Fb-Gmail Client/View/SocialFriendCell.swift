@@ -33,6 +33,5 @@ class SocialFriendCell: UITableViewCell {
         }else {
             nameLbl.text = friend.name
         }
-
     }
 }
