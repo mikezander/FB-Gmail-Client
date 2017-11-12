@@ -17,6 +17,7 @@
 		C47F3F751FB5237400F1FD1C /* SocialFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F3F741FB5237400F1FD1C /* SocialFriend.swift */; };
 		C47F3F771FB52A0100F1FD1C /* SocialFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F3F761FB52A0100F1FD1C /* SocialFriendCell.swift */; };
 		C4DCB92C1FB5821A0075B025 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4DCB92B1FB5820C0075B025 /* GoogleService-Info.plist */; };
+		C4F128C81FB9009B00A0A744 /* FacebookGoogleClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F128C71FB9009B00A0A744 /* FacebookGoogleClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		C47F3F741FB5237400F1FD1C /* SocialFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialFriend.swift; sourceTree = "<group>"; };
 		C47F3F761FB52A0100F1FD1C /* SocialFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialFriendCell.swift; sourceTree = "<group>"; };
 		C4DCB92B1FB5820C0075B025 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C4F128C71FB9009B00A0A744 /* FacebookGoogleClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookGoogleClient.swift; sourceTree = "<group>"; };
 		CEAF0D2DC2FC48502C100528 /* Pods-Fb-Gmail Client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fb-Gmail Client.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fb-Gmail Client/Pods-Fb-Gmail Client.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 		C47F3F5C1FB4A1AC00F1FD1C /* Fb-Gmail Client */ = {
 			isa = PBXGroup;
 			children = (
+				C4F128C41FB9002100A0A744 /* Client */,
 				C48905081FB5440500D437A0 /* Model */,
 				C48905071FB543EF00D437A0 /* Controller */,
 				C489050A1FB5442400D437A0 /* View */,
@@ -124,6 +127,14 @@
 				C47F3F761FB52A0100F1FD1C /* SocialFriendCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C4F128C41FB9002100A0A744 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				C4F128C71FB9009B00A0A744 /* FacebookGoogleClient.swift */,
+			);
+			path = Client;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 				C47F3F601FB4A1AC00F1FD1C /* LoginVC.swift in Sources */,
 				C47F3F771FB52A0100F1FD1C /* SocialFriendCell.swift in Sources */,
 				C47F3F5E1FB4A1AC00F1FD1C /* AppDelegate.swift in Sources */,
+				C4F128C81FB9009B00A0A744 /* FacebookGoogleClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
