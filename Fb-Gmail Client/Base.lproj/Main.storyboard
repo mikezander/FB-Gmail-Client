@@ -104,38 +104,50 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VH-hw-uMK">
-                                                    <rect key="frame" x="76" y="14" width="291" height="23.5"/>
+                                                    <rect key="frame" x="106" y="14" width="261" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J7w-K5-ls6">
-                                                    <rect key="frame" x="8" y="8.5" width="60" height="60.5"/>
+                                                    <rect key="frame" x="38" y="8.5" width="60" height="60.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="Jiw-9S-lAK"/>
                                                         <constraint firstAttribute="height" constant="60" id="TzO-sx-x9Q"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abY-Gc-SXy">
-                                                    <rect key="frame" x="76" y="45.5" width="291" height="0.0"/>
+                                                    <rect key="frame" x="106" y="45.5" width="261" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgG-lU-zII">
+                                                    <rect key="frame" x="8" y="28" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="CRb-PA-pNg"/>
+                                                        <constraint firstAttribute="height" constant="20" id="gft-HO-EXB"/>
+                                                    </constraints>
+                                                    <state key="normal" image="icons8-checked"/>
+                                                    <state key="selected" image="icons8-checked"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="sgG-lU-zII" firstAttribute="centerY" secondItem="S31-i2-huT" secondAttribute="centerY" id="3WQ-U4-hTu"/>
                                                 <constraint firstItem="abY-Gc-SXy" firstAttribute="trailing" secondItem="S31-i2-huT" secondAttribute="trailingMargin" id="Kxf-Q8-YIb"/>
+                                                <constraint firstItem="J7w-K5-ls6" firstAttribute="leading" secondItem="sgG-lU-zII" secondAttribute="trailing" constant="10" id="LJU-DD-EZm"/>
                                                 <constraint firstItem="6VH-hw-uMK" firstAttribute="top" secondItem="S31-i2-huT" secondAttribute="topMargin" constant="6" id="LfX-Ct-Zho"/>
                                                 <constraint firstItem="J7w-K5-ls6" firstAttribute="centerY" secondItem="S31-i2-huT" secondAttribute="centerY" id="QNQ-at-tBT"/>
                                                 <constraint firstItem="6VH-hw-uMK" firstAttribute="trailing" secondItem="S31-i2-huT" secondAttribute="trailingMargin" id="UkK-fl-ldF"/>
+                                                <constraint firstItem="sgG-lU-zII" firstAttribute="leading" secondItem="S31-i2-huT" secondAttribute="leadingMargin" id="Vh5-xG-SZc"/>
                                                 <constraint firstItem="abY-Gc-SXy" firstAttribute="top" secondItem="6VH-hw-uMK" secondAttribute="bottom" constant="8" id="XUw-4N-EIN"/>
-                                                <constraint firstItem="J7w-K5-ls6" firstAttribute="leading" secondItem="S31-i2-huT" secondAttribute="leadingMargin" id="gXr-nQ-2VK"/>
                                                 <constraint firstItem="6VH-hw-uMK" firstAttribute="leading" secondItem="J7w-K5-ls6" secondAttribute="trailing" constant="8" id="iyC-dO-Zsn"/>
                                                 <constraint firstItem="abY-Gc-SXy" firstAttribute="leading" secondItem="J7w-K5-ls6" secondAttribute="trailing" constant="8" id="ytm-fU-cCl"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="emailLbl" destination="abY-Gc-SXy" id="lz1-bZ-Pk4"/>
+                                            <outlet property="inviteFlagBtn" destination="sgG-lU-zII" id="ss7-oU-6Is"/>
                                             <outlet property="nameLbl" destination="6VH-hw-uMK" id="nwl-Vq-Kft"/>
                                             <outlet property="profilePic" destination="J7w-K5-ls6" id="7R0-0h-NhQ"/>
                                         </connections>
@@ -172,7 +184,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="YgA-RV-ive" id="CfI-On-p8q"/>
+                        <outlet property="tableView" destination="YgA-RV-ive" id="veE-OY-9t0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ib-zc-G3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -181,6 +193,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icons8-checked" width="50" height="50"/>
         <image name="icons8-facebook" width="50" height="50"/>
         <image name="icons8-google" width="40" height="40"/>
     </resources>

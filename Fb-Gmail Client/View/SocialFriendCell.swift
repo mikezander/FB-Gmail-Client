@@ -14,9 +14,11 @@ class SocialFriendCell: UITableViewCell {
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var emailLbl: UILabel!
+    @IBOutlet weak var inviteFlagBtn: UIButton!
     
     func configCell(friend: SocialFriend) {
-        
+        inviteFlagBtn.isHidden = (!friend.inviteFlag)
+
         profilePic.sd_setImage(with: URL(string: friend.url),placeholderImage: UIImage(named: "profile-placeholder"))
         
         if friend.email != nil {
@@ -34,4 +36,16 @@ class SocialFriendCell: UITableViewCell {
             nameLbl.text = friend.name
         }
     }
+    
+    func toggleInviteButton(flag: Bool) {
+        if flag {
+            inviteFlagBtn.isHidden = false
+            inviteFlagBtn.alpha = 1.0
+        } else {
+            inviteFlagBtn.alpha = 0.0
+            inviteFlagBtn.isHidden = true
+            
+        }
+    }
+    
 }

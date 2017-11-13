@@ -49,7 +49,9 @@ class LoginVC: UIViewController, XMLParserDelegate{
                 print("user cancelled the login")
             case.success(grantedPermissions: _, _, _):
                 
-                FacebookGoogleClient.instance.parseFacebookFriendsData(completion: { (data, error) in
+                FacebookGoogleClient
+                    .instance
+                    .parseFacebookFriendsData(completion: { (data, error) in
                     guard error == nil else { print(error!.localizedDescription); return }
   
                     if let data = data {
