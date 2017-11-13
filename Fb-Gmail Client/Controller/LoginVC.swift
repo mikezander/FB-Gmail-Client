@@ -8,10 +8,8 @@
 import UIKit
 import FacebookCore
 import FacebookLogin
-import SwiftyJSON
 import GoogleSignIn
-import Google
-import SWXMLHash
+import SVProgressHUD
 
 class LoginVC: UIViewController, XMLParserDelegate{
 
@@ -50,16 +48,19 @@ class LoginVC: UIViewController, XMLParserDelegate{
                 print("user cancelled the login")
             case.success(grantedPermissions: _, _, _):
                 
+                SVProgressHUD.show()
+                
                 FacebookGoogleClient
                     .instance
                     .parseFacebookFriendsData(completion: { (data, error) in
-                    guard error == nil else { print(error!.localizedDescription); return }
+                        guard error == nil else { print(error!.localizedDescription); SVProgressHUD.dismiss(); return }
   
                     if let data = data {
                         self.friends = data
                         
                         DispatchQueue.main.async {
                             self.isFacebook = true
+                            SVProgressHUD.dismiss()
                             self.performSegue(withIdentifier: "segueToInviteVC", sender: self)
                         }
                     }
@@ -98,17 +99,21 @@ extension LoginVC: GIDSignInDelegate, GIDSignInUIDelegate {
     }
 
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-         print(user.accessibleScopes)
+
+        SVProgressHUD.show()
 
         FacebookGoogleClient
             .instance
             .getGoogleFriendsInfo(authToken: GIDSignIn.sharedInstance().currentUser.authentication!){ data, error in
             
+                guard error == nil else { print(error!.localizedDescription); SVProgressHUD.dismiss(); return }
+                
                 if let data = data {
                     self.friends = data
                    
                     DispatchQueue.main.async {
                         self.isFacebook = false
+                        SVProgressHUD.dismiss()
                         self.performSegue(withIdentifier: "segueToInviteVC", sender: self)
                     }
                 }

@@ -11,7 +11,6 @@ import FacebookCore
 import FacebookLogin
 import Google
 import GoogleSignIn
-import FBSDKShareKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
@@ -26,8 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
            print("Error configuring Google services: \(String(describing: configureError))")
         return false
         }
-        
-        
 
         SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         

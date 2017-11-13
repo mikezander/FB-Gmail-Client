@@ -7,7 +7,6 @@
 //
 import UIKit
 import GoogleSignIn
-import FBSDKShareKit
 import MessageUI
 
 class InviteVC: UIViewController{
@@ -38,18 +37,18 @@ class InviteVC: UIViewController{
     
     @IBAction func invitePressed(_ sender: Any) {
         
-        getEmailsAndPhoneNumbers()
+        let (emailCount, phoneCount) = getEmailsAndPhoneNumbers()
        
         let actionSheet = UIAlertController(title: "Invitation Source", message: "Choose a source", preferredStyle: .actionSheet)
        
-        actionSheet.addAction(UIAlertAction(title: "Email \(emailsOfFriends.count) friends", style: .default, handler: { (action:UIAlertAction) in
+        actionSheet.addAction(UIAlertAction(title: "Email \(emailCount) friends", style: .default, handler: { (action:UIAlertAction) in
             
             if !self.emailsOfFriends.isEmpty {
                 self.sendEmailInvitations(friends: self.emailsOfFriends)
             }
         }))
         
-        actionSheet.addAction(UIAlertAction(title: "Text \(phoneNumberOfFriends.count) friends", style: .default, handler: { (action:UIAlertAction) in
+        actionSheet.addAction(UIAlertAction(title: "Text \(phoneCount) friends", style: .default, handler: { (action:UIAlertAction) in
             
             if !self.phoneNumberOfFriends.isEmpty {
                 self.sendTextInviatations(friends: self.phoneNumberOfFriends)
@@ -83,19 +82,22 @@ class InviteVC: UIViewController{
     // REQUIRES FACEBOOK APPROVAL BEFORE USAGE
     //https://stackoverflow.com/questions/31165632/facebook-app-invite-dialog-not-working
     
-    func getEmailsAndPhoneNumbers() {
+    func getEmailsAndPhoneNumbers() -> (Int, Int) {
+        var emailCount = 0
+        var phoneCount = 0
+        
         for friend in friends {
             
             if friend.inviteFlag == true {
                 
                 if let _ = friend.email {
                     emailsOfFriends.append(friend)
-
+                    emailCount += 1
                 }
                 
                 if let _ = friend.phoneNumber {
                     phoneNumberOfFriends.append(friend)
-
+                    phoneCount += 1
                 }
             }
 
@@ -106,6 +108,8 @@ class InviteVC: UIViewController{
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             present(alert, animated: true, completion: nil)
         }
+        
+        return (emailCount, phoneCount)
     }
    
 }

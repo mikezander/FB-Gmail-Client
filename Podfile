@@ -8,11 +8,8 @@ target 'Fb-Gmail Client' do
   # Pods for Fb-Gmail Client
 pod ‘FacebookCore’
 pod ‘FacebookLogin’
-pod 'SwiftyJSON'
 pod 'SDWebImage'
 pod 'Google/SignIn'
-pod 'FBSDKShareKit'
-pod 'AFNetworking', '~> 3.0'
-pod 'SWXMLHash', '~> 4.0.0'
+pod 'SVProgressHUD'
 
 end

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0BF17E79553A313F64C858E3DA2E3D68"
+               BlueprintIdentifier = "D71E7C88226D9EE8564515C00CC2A26F"
                BuildableName = "Pods_Fb_Gmail_Client.framework"
                BlueprintName = "Pods-Fb-Gmail Client"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0BF17E79553A313F64C858E3DA2E3D68"
+            BlueprintIdentifier = "D71E7C88226D9EE8564515C00CC2A26F"
             BuildableName = "Pods_Fb_Gmail_Client.framework"
             BlueprintName = "Pods-Fb-Gmail Client"
             ReferencedContainer = "container:Pods.xcodeproj">
