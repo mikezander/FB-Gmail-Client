@@ -17,6 +17,7 @@ class LoginVC: UIViewController, XMLParserDelegate{
 
     var friends = [SocialFriend]()
     var googleClientId = "115814811542-ka0chf3bitargckp2sqmnc5a6opf79o6.apps.googleusercontent.com"
+    var isFacebook = Bool()
 
     @IBOutlet weak var fbButton: UIButton!
  
@@ -58,6 +59,7 @@ class LoginVC: UIViewController, XMLParserDelegate{
                         self.friends = data
                         
                         DispatchQueue.main.async {
+                            self.isFacebook = true
                             self.performSegue(withIdentifier: "segueToInviteVC", sender: self)
                         }
                     }
@@ -73,6 +75,7 @@ class LoginVC: UIViewController, XMLParserDelegate{
             let navVC = segue.destination as? UINavigationController
             let inviteVC = navVC?.viewControllers.first as! InviteVC
             inviteVC.friends = self.friends
+            inviteVC.isFacebook = self.isFacebook
         }
         
     }
@@ -103,8 +106,9 @@ extension LoginVC: GIDSignInDelegate, GIDSignInUIDelegate {
             
                 if let data = data {
                     self.friends = data
-                    
+                   
                     DispatchQueue.main.async {
+                        self.isFacebook = false
                         self.performSegue(withIdentifier: "segueToInviteVC", sender: self)
                     }
                 }

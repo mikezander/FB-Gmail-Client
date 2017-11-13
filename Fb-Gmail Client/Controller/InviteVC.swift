@@ -14,7 +14,10 @@ class InviteVC: UIViewController{
     
     var friends = [SocialFriend]()
     var filteredFriends = [SocialFriend]()
+    var emailsOfFriends = [SocialFriend]()
+    var phoneNumberOfFriends = [SocialFriend]()
     let searchController = UISearchController(searchResultsController: nil)
+    var isFacebook = Bool()
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -28,10 +31,38 @@ class InviteVC: UIViewController{
         definesPresentationContext = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     @IBAction func invitePressed(_ sender: Any) {
-        sendEmailInvitations()
         
-        sendTextInviatations()
+        getEmailsAndPhoneNumbers()
+       
+        let actionSheet = UIAlertController(title: "Invitation Source", message: "Choose a source", preferredStyle: .actionSheet)
+       
+        actionSheet.addAction(UIAlertAction(title: "Email \(emailsOfFriends.count) friends", style: .default, handler: { (action:UIAlertAction) in
+            
+            if !self.emailsOfFriends.isEmpty {
+                self.sendEmailInvitations(friends: self.emailsOfFriends)
+            }
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Text \(phoneNumberOfFriends.count) friends", style: .default, handler: { (action:UIAlertAction) in
+            
+            if !self.phoneNumberOfFriends.isEmpty {
+                self.sendTextInviatations(friends: self.phoneNumberOfFriends)
+            }
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler:nil))
+        
+        actionSheet.popoverPresentationController?.sourceView = self.view
+        actionSheet.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection()
+        actionSheet.popoverPresentationController?.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+        
+        present(actionSheet, animated: true, completion: nil)
     }
 
     func searchBarisEmpty() -> Bool {
@@ -51,6 +82,31 @@ class InviteVC: UIViewController{
     
     // REQUIRES FACEBOOK APPROVAL BEFORE USAGE
     //https://stackoverflow.com/questions/31165632/facebook-app-invite-dialog-not-working
+    
+    func getEmailsAndPhoneNumbers() {
+        for friend in friends {
+            
+            if friend.inviteFlag == true {
+                
+                if let _ = friend.email {
+                    emailsOfFriends.append(friend)
+
+                }
+                
+                if let _ = friend.phoneNumber {
+                    phoneNumberOfFriends.append(friend)
+
+                }
+            }
+
+        }
+        
+        if isFacebook{
+            let alert = UIAlertController(title: "FB Authorization needed", message: "In order to sens SMS app invitations with Facebook you must go through Facebook review first.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+    }
    
 }
 
@@ -108,34 +164,58 @@ extension InviteVC: UISearchResultsUpdating {
 
 extension InviteVC: MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate {
     
-    func sendEmailInvitations() {
+    func sendEmailInvitations(friends: [SocialFriend]) {
+        var emails = [String]()
+        for friend in friends {
+            emails.append(friend.email!)
+            friend.inviteFlag = false
+        }
+
         if (MFMailComposeViewController.canSendMail()) {
             let mailVC = MFMailComposeViewController()
             mailVC.mailComposeDelegate = self
             mailVC.setToRecipients(["mikezander87@yahoo.com"])
-            mailVC.setSubject("test")
-            mailVC.setMessageBody("fdsfsdfsdfsdfsdf", isHTML: false)
+            mailVC.setSubject("App Invitation")
+            mailVC.setMessageBody("Check out this cool app I've been using! \n https://itunes.apple.com/us/app/sk8spots-skate-spots-app/id1281370899?mt=8", isHTML: false)
             self.present(mailVC, animated: true, completion: nil)
         }
         
     }
     
-    func sendTextInviatations() {
+    func sendTextInviatations(friends: [SocialFriend]) {
+        var phoneNumbers = [String]()
+        for friend in friends {
+            phoneNumbers.append(friend.phoneNumber!)
+            friend.inviteFlag = false
+        }
         if (MFMessageComposeViewController.canSendText()) {
             let messageVC = MFMessageComposeViewController()
             messageVC.body = "https://itunes.apple.com/us/app/sk8spots-skate-spots-app/id1281370899?mt=8"
-            messageVC.recipients = ["19143107144"]
+            messageVC.recipients = phoneNumbers
             messageVC.messageComposeDelegate = self
             self.present(messageVC, animated: true, completion: nil)
         }
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true, completion: nil)
+        emailsOfFriends.removeAll()
+        switch (result.rawValue) {
+        case MFMailComposeResult.cancelled.rawValue:
+            print("Message was cancelled")
+            self.dismiss(animated: true, completion: nil)
+        case MFMailComposeResult.failed.rawValue:
+            print("Message failed")
+            self.dismiss(animated: true, completion: nil)
+        case MFMailComposeResult.sent.rawValue:
+            print("Message was sent")
+            self.dismiss(animated: true, completion: nil)
+        default:
+            break;
+        }
     }
 
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
-        //... handle sms screen actions
+        phoneNumberOfFriends.removeAll()
         switch (result.rawValue) {
         case MessageComposeResult.cancelled.rawValue:
             print("Message was cancelled")
